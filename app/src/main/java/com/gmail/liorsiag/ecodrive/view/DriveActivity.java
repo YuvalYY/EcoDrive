@@ -1,13 +1,16 @@
-package com.gmail.liorsiag.ecodrive;
+package com.gmail.liorsiag.ecodrive.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.gmail.liorsiag.ecodrive.R;
+
+public class DriveActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_drive);
     }
 }
