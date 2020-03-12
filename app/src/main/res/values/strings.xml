@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">EcoDrive</string>
+    <string name="gps">GPS:</string>
+    <string name="obd">OBD:</string>
+    <string name="off">Off</string>
+    <string name="searching">Searching</string>
+    <string name="connected">Connected</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="connect_obd">Connect to OBD</string>
+    <string name="disconnect_obd">Disconnect from OBD</string>
+    <string name="settings">Settings</string>
+    <string name="start">Start</string>
+    <string name="use_voice">Use voice</string>
+    <string name="route_name_hint">Enter the route name</string>
+    <string name="route_model_hint">Choose the route model file:</string>
 </resources>
