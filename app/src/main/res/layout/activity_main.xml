@@ -109,6 +109,12 @@
             android:enabled="false"
             android:text="@string/use_voice" />
 
+        <Button
+            android:id="@+id/btn_connect_obd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/connect_obd" />
+
     </LinearLayout>
 
     <LinearLayout

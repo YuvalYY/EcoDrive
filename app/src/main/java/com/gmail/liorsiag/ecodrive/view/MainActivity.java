@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     MainController mController;
     TextView mTextGps,mTextObd;
-    Button mBtnStart, mBtnSettings;
+    Button mBtnStart, mBtnSettings,mBtnConnectObd;
     EditText mEdittRouteName;
 
     @Override
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         mTextObd=findViewById(R.id.text_obd);
         mBtnSettings=findViewById(R.id.btn_settings);
         mBtnStart=findViewById(R.id.btn_start);
+        mBtnConnectObd=findViewById(R.id.btn_connect_obd);
         mEdittRouteName=findViewById(R.id.editt_route_name);
     }
 
@@ -67,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
                 //call settings
             }
         });
+
+        mBtnConnectObd.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //connect/disconnect obd
+            }
+        });
     }
 
     public void setGpsText(String value){
@@ -79,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void setRouteName(String value){
         mEdittRouteName.setText(value);
+    }
+
+    public void setConnectObdBtnText(String value){
+        mBtnConnectObd.setText(value);
     }
 
     public String getRouteName(){
