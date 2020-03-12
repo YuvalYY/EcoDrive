@@ -2,6 +2,7 @@ package com.gmail.liorsiag.ecodrive.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,8 @@ import com.gmail.liorsiag.ecodrive.controller.MainController;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final static String TAG="MainActivity";
+
     MainController mController;
     TextView mTextGps,mTextObd;
     Button mBtnStart, mBtnSettings,mBtnConnectObd;
@@ -20,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate: Called");
         super.onCreate(savedInstanceState);
         mController=new MainController(this);
         setContentView(R.layout.activity_main);
@@ -29,16 +33,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
+        Log.d(TAG, "onStart: Called");
         super.onStart();
     }
 
     @Override
     protected void onStop() {
+        Log.d(TAG, "onStop: Called");
         super.onStop();
     }
 
     @Override
     protected void onDestroy() {
+        Log.d(TAG, "onDestroy: Called");
         mController.onDestroy();
         mController=null;
         super.onDestroy();
@@ -65,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnSettings.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                //call settings
+                mController.startPrefs();
             }
         });
 
